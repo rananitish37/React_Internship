@@ -3,15 +3,12 @@ import { Route,Routes,BrowserRouter, Link} from 'react-router-dom';
 import {Home} from './Home';
 import {About} from './About';
 import {NotFound} from './NotFound';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Link className='link' to="/" >Home</Link>
-        <Link className='link' to="/About" >About</Link>
-        <Link className='link' to="/NotFound" >NotFound</Link>
-      </div>
+      <Navbar />
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/About' element={<About/>}/>
