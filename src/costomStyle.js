@@ -1,3 +1,6 @@
 export const costomStyle={
-    color:"red"
+    color:"red",
+    fontWeight:500,
+    fontSize:24,
+
 };

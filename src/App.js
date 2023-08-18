@@ -1,24 +1,46 @@
-import './App.css';
-import { Route,Routes,BrowserRouter, Link} from 'react-router-dom';
-import {Home} from './Home';
-import {About} from './About';
-import {NotFound} from './NotFound';
+import React from 'react'
+import {BrowserRouter,Routes,Route,NavLink} from "react-router-dom";
+import Homepage from './Components/Homepage';
+import BookList from './Components/BookList';
+import PageNotFound from './Components/PageNotFound';
+import Navbar from './Components/Navbar';
+import Login from './Components/Login';
+import Register from './Components/Register';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ThemeProvider } from '@emotion/react';
+import { theme } from './theme';
 
-function App() {
+const App = () => {
+  
+
   return (
-    <BrowserRouter>
-      <div>
-        <Link className='link' to="/" >Home</Link>
-        <Link className='link' to="/About" >About</Link>
-        <Link className='link' to="/NotFound" >NotFound</Link>
-      </div>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/About' element={<About/>}/>
-        <Route path='*' element={<NotFound/>}/>
-    </Routes>
-    </BrowserRouter>
-  );
+    <>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+
+      <Navbar/>
+
+      <Routes>  
+        <Route path="/" element=<Login/>/>
+        <Route path="/register" element=<Register/>/>
+        <Route path="/home" element=<Homepage/>/>
+        <Route path="*" element=<PageNotFound/>/>
+
+        // <Route path="/booklist" element=<BookList/>/>
+        // <Route path="/pagenotfound" element=<PageNotFound/>/>
+      </Routes>
+      
+
+      <ToastContainer />
+      </BrowserRouter>
+
+      </ThemeProvider>
+    
+    
+    
+    </>
+  ) 
 }
 
-export default App;
+export default App

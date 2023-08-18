@@ -1,0 +1,21 @@
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    box-shadow: 1px 1px 3px 3px rgb(61,60,60,0,4);
+}
+header .logo{
+    font-size: 30px;
+    color:#777;
+}
+header .display-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.display-menu .menu{
+    padding: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
