@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Box, Button, Modal, Typography, styled } from "@mui/material";
 import { useState } from "react";
@@ -43,4 +44,12 @@ export const About = () => {
 </Modal>
     </>
     );
+=======
+import Navbaryarn from "./Components/Navbar";
+
+export const About=()=>{
+    return <div className="page">
+    About page
+    </div>
+>>>>>>> 99ea84f678a7c9fed2e86a49094cb3755292a6c4
 };
